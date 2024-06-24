@@ -1,0 +1,67 @@
+{
+    "additional-repositories": [
+        "multilib"
+    ],
+    "archinstall-language": "Brazilian Portuguese",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Grub",
+    "config_version": "2.8.0",
+    "debug": false,
+    "disk_config": null,
+    "disk_encryption": null,
+    "hostname": "archlinux",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "br-abnt2",
+        "sys_enc": "UTF-8",
+        "sys_lang": "pt_BR.UTF-8"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Brazil": [
+                "https://mirror.ufscar.br/archlinux/$repo/os/$arch",
+                "https://archlinux.c3sl.ufpr.br/$repo/os/$arch",
+                "http://mirror.ufscar.br/archlinux/$repo/os/$arch",
+                "http://mirror.ufam.edu.br/archlinux/$repo/os/$arch",
+                "http://linorg.usp.br/archlinux/$repo/os/$arch",
+                "http://archlinux.c3sl.ufpr.br/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [],
+    "parallel downloads": 8,
+    "profile_config": {
+        "gfx_driver": "AMD / ATI (open-source)",
+        "greeter": "sddm",
+        "profile": {
+            "custom_settings": {
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
+            },
+            "details": [
+                "Hyprland"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": "guided",
+    "silent": false,
+    "skip_ntp": false,
+    "skip_version_check": false,
+    "swap": true,
+    "timezone": "America/Sao_Paulo",
+    "uki": false,
+    "version": "2.8.0"
+}
