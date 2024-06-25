@@ -15,6 +15,43 @@
     "kernels": [
         "linux"
     ],
+    "custom-commands" : [
+        "echo Updating system",
+        "sudo pacman -Syu",
+
+        "Installing yay",
+        "sudo pacman -S yay",
+
+        "echo Installing arch and AUR packages",
+        "yay -S alacritty amd-ucode baobab base base-devel bdf-unifont bibata-cursor-theme btrfs-progs calibre chromium cups dunst dvisvgm efibootmgr epson-inkjet-printer-escpr evince eza fastfetch ffnvcodec-headers figlet firefox fragments gamemode gamescope gdm git gnome-calculator gnome-calendar gnome-color-manager gnome-disk-utility gnome-system-monitor grim grub gst-libav gst-plugin-openh264 gst-plugin-pipewire gst-plugins-ugly gstreamer-vaapi gum guvcview gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb hasherino-latest-bin heroic-games-launcher-bin htop hypridle hyprland hyprlock hyprpaper hyprshade hyprshot iwd lib32-gamemode lib32-gst-plugins-base lib32-gst-plugins-good lib32-libwebp libavif libertinus-font libpulse libreoffice-fresh libva-mesa-driver libva-utils linux linux-firmware llvm lutris malcontent man-pages mangohud mesa-utils mesa-vdpau mkinitcpio-firmware mousepad mutter nautilus nautilus-share neovim net-tools network-manager-applet networkmanager noto-fonts npm ntfs-3g nvme-cli obs-studio obs-vkcapture-git opentabletdriver orca otf-font-awesome pacman-contrib pacseek papirus-icon-theme pavucontrol perf perl-image-exiftool pipewire pipewire-alsa pipewire-jack pipewire-pulse plasma-meta playerctl polkit-gnome postman-bin proton-ge-custom-bin protontricks pycharm-community-edition pylama pyright python-pip python-pipx python-pywal python-rich python python311 qalculate-gtk qt6-wayland rnote rofi-wayland rsync rygel samba slurp smartmontools starship steam sushi swappy timeshift torbrowser-launcher totem tracker3-miners ttf-dejavu ttf-fira-code ttf-fira-sans ttf-firacode-nerd ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono tumbler vim vkd3d vlc vulkan-radeon vulkan-tools waybar wget wine wine-gecko wine-mono wireless_tools wireplumber wlogout xarchiver xclip xdg-desktop-portal-gnome xdg-desktop-portal-hyprland xdg-desktop-portal-wlr xdg-user-dirs-gtk xdg-utils xf86-video-amdgpu xf86-video-ati xournalpp yelp zram-generator zsh flatpak node informant",
+
+        "echo Add user to groups",
+        "sudo usermod -aG informant,games,gamemode $(whoami)",
+
+        "echo Configuring git",
+        "git config --global user.name douglascdev",
+        "git config --global user.email douglasc.dev@gmail.com",
+        "git config --global core.editor nvim",
+        "git config --global init.defaultBranch main",
+
+        "echo Installing flatpak packages",
+        "flatpak install com.spotify.Client dev.vencord.Vesktop net.ankiweb.Anki org.freedesktop.Sdk.Extension.texlive org.gimp.GIMP",
+
+        "echo Setting zsh as default shell",
+        "chsh -s $(which zsh)",
+
+        "echo Installing ML4W",
+        "bash <(curl -s https://gitlab.com/stephan-raabe/dotfiles/-/raw/main/setup.sh)",
+
+        "echo Installing astronvim dependencies",
+        "sudo pacman -S ripgrep lazygit gdu bottom",
+        "npm install tree-sitter-cli",
+
+        "echo Loading astronvim settings",
+        "git clone https://github.com/douglascdev/astronvim-settings2 ~/.config/nvim",
+
+        "# TODO: load changes to default ML4W settings"
+    ],
     "locale_config": {
         "kb_layout": "br-abnt2",
         "sys_enc": "UTF-8",
